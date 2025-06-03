@@ -1,18 +1,10 @@
-# WEEK 1 - Getting Started with RISC-V
+# 📚 Week 1 - RISC-V Setup and Exploration
 
-## 📦 Folder Structure
+This directory contains all Week 1 tasks for the RISC-V SoC development learning series.
 
-This week 1 Tasks.
+## Structure
 
-## 📁 Files
+- `1_Toolchain_Setup.md` – Installing and verifying the RISC-V toolchain
+- `2_Hello_RISCV.md` – Compiling a simple RISC-V hello world
+- `resources/` – Contains screenshots, source files, and other helpful materials
 
-- `Install & Sanity-Check the Toolchain.md`: Steps to install and verify the RISC-V toolchain.
-- `Compile_“Hello,RISC-V”.md`: Compiling and running a simple RISC-V program.
-
-## ✅ Objective
-
-Ensure the RISC-V development environment is properly set up and working.
-
----
-
-*Author: Niranjan*
