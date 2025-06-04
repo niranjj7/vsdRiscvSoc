@@ -132,7 +132,7 @@ Expected output:
 ```
 Hello, RISC-V!
 ```
-![Output Screenshot](Resources/print_qrmu.png)
+![Output Screenshot](Resources/print_qemu.png)
 ---
 ## 💡 Notes
 - Use `riscv64-unknown-elf-gcc` and `qemu-riscv64` for 64-bit programs.
