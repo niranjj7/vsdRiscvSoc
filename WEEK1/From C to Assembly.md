@@ -1,33 +1,44 @@
+# From C to Assembly
 
-# 🧠 From C to Assembly (Week 1 – Task 3)
-
-This section explains how to write a simple RISC-V C program, compile it to assembly, and understand the function prologue and epilogue.
-
----
-
-## 🚀 Full Step-by-Step Guide (with sample output)
+## Step 1: Create a minimal Hello World program
 
 ```bash
-# Step 1: Create a minimal Hello World program
 nano hello.c
-# Paste the following code into it:
+```
+
+Paste the following code into it:
+
+```c
 #include <stdio.h>
 
 int main() {
     printf("Hello RISC-V!\n");
     return 0;
 }
-
-# Step 2: Compile the C program to assembly (.s file)
-
-riscv32-unknown-elf-gcc -S -O0 -march=rv32imc -mabi=ilp32 hello.c -o hello.s
-
-# Step 3: View the generated assembly code
-cat hello.s
-
-# Sample output:
 ```
-.file   "hello.c"
+
+---
+
+## Step 2: Compile the C program to assembly (.s file)
+
+```bash
+riscv32-unknown-elf-gcc -S -O0 -march=rv32imc -mabi=ilp32 hello.c -o hello.s
+```
+
+---
+
+## Step 3: View the generated assembly code
+
+```bash
+cat hello.s
+```
+
+---
+
+## Sample output:
+
+```asm
+.file "hello.c"
 .option nopic
 .attribute arch, "rv32i2p1_m2p0_c2p0"
 .attribute unaligned_access, 0
@@ -42,22 +53,28 @@ cat hello.s
 .globl main
 .type main, @function
 main:
-    addi    sp,sp,-16        # Prologue: allocate stack
-    sw      ra,12(sp)        # Save return address
-    sw      s0,8(sp)         # Save frame pointer
-    addi    s0,sp,16         # Set new frame pointer
-    lui     a5,%hi(.LC0)     # Load upper address of string
-    addi    a0,a5,%lo(.LC0)  # Load lower part into a0
-    call    puts             # Call puts("Hello RISC-V!")
-    li      a5,0
-    mv      a0,a5            # Return 0
-    lw      ra,12(sp)        # Restore return address
-    lw      s0,8(sp)         # Restore frame pointer
-    addi    sp,sp,16         # Free stack
-    jr      ra               # Return
-.size   main, .-main
-.ident  "GCC: (g04696df096) 14.2.0"
+    addi sp,sp,-16            # Prologue: allocate stack
+    sw ra,12(sp)              # Save return address
+    sw s0,8(sp)               # Save frame pointer
+    addi s0,sp,16             # Set new frame pointer
+    lui a5,%hi(.LC0)          # Load upper address of string
+    addi a0,a5,%lo(.LC0)      # Load lower part into a0
+    call puts                 # Call puts("Hello RISC-V!")
+    li a5,0
+    mv a0,a5                  # Return 0
+    lw ra,12(sp)              # Restore return address
+    lw s0,8(sp)               # Restore frame pointer
+    addi sp,sp,16             # Free stack
+    jr ra                     # Return
+.size main, .-main
+.ident "GCC: (g04696df096) 14.2.0"
 .section .note.GNU-stack,"",@progbits
 ```
-[Output Screenshot](Resources/cToAsm.png)
+
 ---
+
+## Output Screenshot
+
+![Output Screenshot](Resources/cToAsm.png)
+
+
