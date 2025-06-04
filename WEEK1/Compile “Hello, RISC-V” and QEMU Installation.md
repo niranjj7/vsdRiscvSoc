@@ -118,7 +118,7 @@ Expected output:
 ```
 hello.elf: ELF 32-bit LSB executable, UCB RISC-V, ...
 ```
-
+![Output Screenshot](Resources/file.png)
 ---
 
 ## ▶️ Step 4: Run (for 32-bit ELF)
@@ -132,7 +132,7 @@ Expected output:
 ```
 Hello, RISC-V!
 ```
-
+![Output Screenshot](Resources/print_qrmu.png)
 ---
 ## 💡 Notes
 - Use `riscv64-unknown-elf-gcc` and `qemu-riscv64` for 64-bit programs.
