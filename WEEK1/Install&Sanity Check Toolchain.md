@@ -52,6 +52,9 @@ riscv32-unknown-elf-gcc --version
 riscv32-unknown-elf-objdump --version
 riscv32-unknown-elf-gdb --version
 ```
+[Output Screenshot](Resources/gcc.png)
+[Output Screenshot](Resources/objdump.png)
+[Output Screenshot](Resources/gdb.png)
 
 You should see version output for each of the above commands.
 
