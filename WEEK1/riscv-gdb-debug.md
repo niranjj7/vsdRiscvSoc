@@ -67,24 +67,6 @@ This runs the program until it hits the breakpoint or another stopping condition
 
 ---
 
-## 6. Step Through Execution
-
-To step through code line-by-line:
-
-```gdb
-(gdb) step
-```
-
-To step one machine instruction at a time:
-
-```gdb
-(gdb) stepi
-```
-
-These are useful for observing exactly how your code executes.
-
----
-
 ## 7. Inspect Registers
 
 To check the value of a specific register, like `a0`, use:
