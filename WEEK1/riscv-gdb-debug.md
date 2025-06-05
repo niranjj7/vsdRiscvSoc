@@ -101,15 +101,15 @@ This shows the instructions in memory at the current program counter, useful for
 
 ### Breakpoint Set at `main`
 
-![Breakpoint](./breakpoint.png)
+![Breakpoint](Resources/breakpoint.png)
 
 ### Continue Execution Output
 
-![Continue](./breakpoint2.png)
+![Continue](Resources/breakpoint2.png)
 
 ### Register Inspection (`a0`)
 
-![Register Info](./info.png)
+![Register Info](Resources/info.png)
 
 ---
 
