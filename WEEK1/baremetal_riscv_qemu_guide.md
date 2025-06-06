@@ -60,7 +60,7 @@ Connect to QEMU’s GDB server:
 ```gdb
 (gdb) target remote :1234
 ```
-[Output GDB](Resources/compile3.png)
+![Output GDB](Resources/compile3.png)
 ---
 
 ### Useful GDB commands
@@ -70,7 +70,7 @@ Connect to QEMU’s GDB server:
 - `step` or `si` — Step through instructions.
 - `continue` or `c` — Continue execution.
 - `quit` — Exit GDB.
-[Output Info Reg](Resources/info_reg.png)
+![Output Info Reg](Resources/info_reg.png)
 ---
 
 ## Example: Disassemble output of `main`
@@ -105,7 +105,7 @@ Dump of assembler code for function main:
    0x80000056 <+74>: ret
 End of assembler dump.
 ```
-[Output Disassemble](Resources/disassemble.png)
+![Output Disassemble](Resources/disassemble.png)
 ---
 
 ### Notes:
