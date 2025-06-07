@@ -144,5 +144,5 @@ Disassembly of section .text:
 8000003c:       03010413                addi    s0,sp,48
 80000040:       fca42e23                sw      a0,-36(s0)
 ```
-![Output File](Resources/terminal_command.png)
+![Output File](Resources/out.png)
 ---
