@@ -1,2 +1,2 @@
 # vsdRiscvSoc
-Project ECE
+India RISC-V CHIP PROJECT 
